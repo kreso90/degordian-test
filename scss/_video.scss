@@ -1,0 +1,75 @@
+.video{
+    background: $blackColor;
+    padding: 5rem 0;
+    color: #fff;
+    .video__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+}
+
+.second__slider{
+    padding: 5rem 0;
+    background: $lightGray;
+    display: flex;
+    align-items: center;
+    h2{
+        color: $blackColor;
+    }
+    .video__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+    .laptop{
+        width: 80%;
+        position: relative;
+        margin: auto;
+        margin-top: 3rem;
+        @media(min-width:$desktop){
+            margin-left: auto;
+            margin-top: 0;
+        }
+        .laptop__slider{
+            width: 76%;
+            margin: auto;
+            top: 5%;
+            position: absolute;
+            height: 84%;
+            left: 12%;
+            .swiper-container{
+                overflow: visible;
+                .swiper-pagination-bullets{
+                    bottom: -85px;
+                    text-align: center;
+                }
+                .swiper-button-next{
+                    right: -50px;
+                    color: $blackColor;
+                    @media(min-width:$desktop){
+                        right: -100px;
+                    }
+                }
+                .swiper-button-prev{
+                    left: -50px;
+                    color: $blackColor;
+                    @media(min-width:$desktop){
+                        left: -100px;
+                    }
+                }
+                .swiper-button-next::after,
+                .swiper-button-prev::after{
+                    display: block;
+                }
+                .swiper-pagination{
+                    display: block;
+                }
+            }
+        }
+    }
+   
+}
+

@@ -1,0 +1,271 @@
+@import "./header";
+@import "./grid";
+@import "./variables";
+@import "./box";
+@import "./offers";
+@import "./video";
+@import "./magazin";
+@import "./contact";
+@import "./accordions";
+@import "./map";
+@import "./footer";
+
+
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?klyku9');
+	src:  url('../fonts/icomoon.eot?klyku9#iefix') format('embedded-opentype'),
+	  url('../fonts/icomoon.ttf?klyku9') format('truetype'),
+	  url('../fonts/icomoon.woff?klyku9') format('woff'),
+	  url('../fonts/icomoon.svg?klyku9#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+  
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-arrow-up:before {
+	content: "\e900";
+  }
+  .icon-close:before {
+	content: "\e901";
+  }
+  .icon-linkedin:before {
+	content: "\e902";
+  }
+  .icon-twitter:before {
+	content: "\e903";
+  }
+  .icon-facebook:before {
+	content: "\e904";
+  }
+  .icon-instagram:before {
+	content: "\e905";
+  }
+  .icon-arrow-right:before {
+	content: "\e906";
+  }
+  .icon-chevron-down:before {
+	content: "\e907";
+  }
+  
+
+/* Default */
+:focus {
+	outline: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	text-shadow: none;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+		-ms-text-size-adjust: 100%;
+	-ms-touch-action: manipulation;
+		touch-action: manipulation;
+	-webkit-tap-highlight-color: transparent;
+	font-size: 16px;
+	line-height: 1;
+}
+
+@media (min-width: 2048px) {
+	html {
+		font-size: 0.78125vw;
+	}
+}
+
+body{
+	margin: 0;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: $grayColor;
+	line-height: 1.5;
+}
+body.overflow{
+	overflow: hidden;
+}
+video,
+img:not(.icon){
+	width: 100%;
+	height: auto;
+}
+
+a{
+	text-decoration: none;
+	color: $grayColor;
+	transition: 0.25s;
+}
+
+a.link{
+	color: $redColor;
+	font-weight: 600;
+	position: relative;
+	padding-right: 20px;
+}
+
+a.link::after{
+	content: "\e906";
+	position: absolute;
+	font-family: 'icomoon';
+	right: 0;
+	top: 1px;
+	font-size: 15px;
+}
+
+.button{
+	background: $redColor;
+	color: #fff;
+	padding: 1rem 2rem;
+	display: flex;
+	border-radius: 100px;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	transition: 0.25s;
+	&:hover{
+		background: #c20020;
+	}
+	
+	span{
+		white-space: nowrap;
+		padding-right: 25px;
+		position: relative;
+	}
+	img{
+		width: 20px;
+		
+	}
+}
+
+.button.button--white{
+	color: $redColor;
+	background: #fff;
+	.button_text::after{
+		content: "\e906";
+		font-family: 'icomoon';
+		position: absolute;
+		right: 0;
+		top: -5px;
+		font-size: 20px;
+	}
+	&:hover{
+		background: $lightGray;
+	}
+}
+
+.button.button--square{
+	border-radius: 5px;
+}
+
+button.button{
+	outline: none;
+	border: 0;
+	padding: 1rem 4rem;
+	font-size: 1.125em;
+}
+
+h1{
+	font-size: 2.125em;
+	color: #fff;
+}
+
+h2{
+	font-size: 1.375em;
+	color: #fff;
+	line-height: 1.15;
+}
+
+h3{
+	font-size: 1.0625em;
+	line-height: 1.15;
+	color: $blackColor;
+}
+
+@media(min-width:$desktop){
+	h1{font-size: 3.375em;}
+	h2{font-size: 2em;}
+	h3{font-size: 1.375em;}
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	left: 0;
+	right: 0;
+	margin: auto;
+	text-align: right;
+}
+.swiper-pagination-bullet{
+	background: #fff;
+	opacity: 0.8;
+	width: 12px;
+	height: 12px;
+}
+
+.swiper-pagination{
+	display: none;
+	@media(min-width:$tablet){
+		display: block;
+	}
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets{
+	bottom: 150px;
+	padding-right: 30px;
+}
+.swiper-pagination-bullet-active{
+	background: $redColor
+}
+
+.swiper-button-prev{
+	left: 30px;
+}
+
+.swiper-button-next{
+	right: 30px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+	font-size: 1.5em;
+	display: none;
+	@media(min-width:$tablet){
+		display: block;
+	}
+}
+
+.section_title{
+	text-align: center;
+	h2{
+		color: $blackColor;
+	}
+	p{
+		@media(min-width:$tablet){
+			font-size: 1.1875em;
+		}
+	}
+}

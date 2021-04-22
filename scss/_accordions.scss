@@ -1,0 +1,97 @@
+.accordions{
+    margin-bottom: 10rem;
+}
+
+.accordian__wrapper{
+    border-top: 1px solid $grayColor;
+    border-bottom: 1px solid $grayColor;
+    position: relative;
+    margin-top: -1px;
+   &:after{
+        content: "\e907";
+        position: absolute;
+        font-family: 'icomoon';
+        right: 0;
+        top: 10px;
+        font-size: 35px;
+        transition: 0.4s;
+        color: $redColor;
+        pointer-events: none;
+   }
+}
+
+
+.accordian__wrapper.active{
+    &:after{
+        transform: rotate(180deg);
+   }
+}
+
+button.accordion__button{
+    width: 100%;
+    background: transparent;
+    padding: 1.25rem;
+    text-align: left;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.25em;
+    color: $grayColor;
+    position: relative;
+    @media(min-width:$tablet){
+        text-align: center;
+    }
+}
+
+
+.accordion__content{
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    h3{
+        font-size: 1.1875em;
+        text-align: center;
+    }
+    > span{
+        font-size: 0.8125em;
+        @media(min-width:$tablet){
+            padding-left: 2rem;
+        }
+    }
+}
+
+.accordion__close{
+    text-align: right;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    @media(min-width:$tablet){
+        padding: 0 2rem;
+    }
+    tr{
+        border-top: 1px solid gray;
+        display: table;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid gray;
+        padding: 0.85rem;
+        font-size: 1.0625em;
+        font-weight: 600;
+        td{
+            line-height: 1.15;
+        }
+        td:nth-child(even){
+            text-align: right;
+        }
+    }
+    tr:nth-child(odd){
+        background: $lightGray;
+    }
+    .table__subtitle{
+        font-size: 1.1875em;
+        text-align: center;
+    }
+}

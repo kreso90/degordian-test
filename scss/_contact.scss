@@ -1,0 +1,86 @@
+.contact__form{
+    margin-bottom: 7rem;
+}
+.form{
+    padding-bottom: 4rem;
+    position: relative;
+}
+.form__messsage{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.input__wrapper{
+    margin-top: 2rem;
+    @media(min-width:$tablet){
+        margin-top: 4rem;
+    }
+    label{
+        font-size: 0.9375em;
+        display: block;
+        @media(min-width:$tablet){
+            font-size: 1.1875em;
+        }
+    }
+    input:not([type="checkbox"]){
+        width: 100%;
+        border:0;
+        border-bottom: 2px solid #f5f5f5;
+        padding: 1rem 0;
+        font-size: 0.9375em;
+        font-family: 'Source Sans Pro', sans-serif;
+        @media(min-width:$tablet){
+            font-size: 1.375em;
+        }
+    }
+  
+    textarea{
+        width: 100%;
+        border:0;
+        border-bottom: 2px solid #f5f5f5;
+        font-size: 0.9375em;
+        font-family: 'Source Sans Pro', sans-serif;
+        @media(min-width:$tablet){
+            font-size: 1.375em;
+        }
+    }
+    input.error:not([type="checkbox"]),
+    textarea.error{
+        border-bottom: 2px solid $redColor;
+    }
+
+    span{
+        float: right;
+        font-size: 0.75em;
+    }
+}
+.submit__wrapper{
+    text-align: center;
+    margin-top: 2rem;
+    @media(min-width:$tablet){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    label{
+        font-size: 0.8125em;
+        font-family: 'Source Sans Pro', sans-serif;
+        @media(min-width:$tablet){
+            font-size: 0.9375em;
+        }
+    }
+    .checkbox_wrapper{
+        text-align: left;
+    }
+    input{
+        font-size: 0.9375em;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    button{
+        margin-top: 2rem;
+        @media(min-width:$tablet){
+            margin-top: 0;
+        }
+    }
+}
+

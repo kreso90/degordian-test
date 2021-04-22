@@ -1,0 +1,36 @@
+.magazin{
+    margin-bottom: 4rem;
+}
+.magazin__title{
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    h2{
+        color: $blackColor;
+    }
+}
+.magazin__wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 3rem;
+    > h3{
+        text-transform: uppercase;
+        color: $grayColor;
+        font-size: 0.8125em;
+        letter-spacing: 2px;
+        @media(min-width:$desktop){
+            font-size: 0.9375em;
+        }
+    }
+    .magazin__bottom{
+        display: flex;
+        height: 100%;
+        flex-wrap: wrap;
+        .magazin__link{
+            
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}

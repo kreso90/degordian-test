@@ -1,0 +1,55 @@
+.map{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.map_wrapper{
+    max-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media(min-width:$tablet){
+        max-width: 50%;
+        flex: 0 0 50%;
+    }
+    h2{
+        color: #fff;
+        position: relative;
+    }
+}
+.map_wrapper:first-of-type{
+    background:url('../img/mapa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.map_wrapper:first-of-type::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(216,45,57, 0.8);
+}
+.map_wrapper:last-of-type{
+    background:url('../img/slika5.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.map_wrapper:last-of-type::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, 0.8);
+}
